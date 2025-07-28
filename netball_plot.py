@@ -90,12 +90,31 @@ def load_all_data() -> pd.DataFrame:
         'Points': [27, 25, 22, 21, 20, 16, 13, 12, 4, 1]
     }
 
+    # New data from the provided image (21/07/2025)
+    data5 = {
+        'Position': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        'Team': ['Tits & Bits', 'See You Next Tuesday', 'Highfield Hornets',
+                 'Belles & Balls', 'May Contain Nuts', 'Deep In The D', 'Balls Out',
+                 'Pivot Grigio', 'Perfect Mix', 'Donald Dodgers'],
+        'Played': [7, 7, 7, 7, 7, 6, 7, 6, 7, 7],
+        'Won': [7, 5, 4, 4, 4, 3, 3, 2, 1, 0],
+        'Lost': [0, 2, 2, 2, 3, 3, 4, 4, 6, 7],
+        'Drawn': [0, 0, 1, 1, 0, 0, 0, 0, 0, 0],
+        'Goals For': [221, 143, 154, 187, 119, 126, 129, 116, 86, 51],
+        'Goals Against': [92, 114, 133, 126, 124, 137, 146, 129, 152, 179],
+        'Goal Diff': [129, 29, 21, 61, -5, -11, -17, -13, -66, -128],
+        'Goal average': [2.40, 1.25, 1.16, 1.48, 0.96, 0.92, 0.88, 0.90, 0.57, 0.28],
+        'Points': [35, 27, 26, 25, 24, 18, 18, 13, 9, 2]
+    }
+
+
     df1 = create_dataframe(data1, '16/06/2025')
     df2 = create_dataframe(data2, '07/07/2025')
     df3 = create_dataframe(data3, '30/06/2025')
-    df4 = create_dataframe(data4, '14/07/2025') # New data from image, renamed to df4
+    df4 = create_dataframe(data4, '14/07/2025')
+    df5 = create_dataframe(data5, '21/07/2025') # New data from image
 
-    return pd.concat([df1, df2, df3, df4], ignore_index=True)
+    return pd.concat([df1, df2, df3, df4, df5], ignore_index=True)
 
 
 def plot_cumulative_metrics(df: pd.DataFrame, metrics: list[str], metric_labels: dict) -> None:
