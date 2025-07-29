@@ -108,7 +108,7 @@ def get_all_league_data() -> pd.DataFrame:
     # New data from the provided image (29/07/2025)
     data6 = {
         'Position': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        'Team': ['Tits & Bits', 'Highfield Hornets', 'Belles & Balls', 'See You Next Tuesd',
+        'Team': ['Tits & Bits', 'Highfield Hornets', 'Belles & Balls', 'See You Next Tuesday',
                  'Deep In The D', 'May Contain Nuts', 'Balls Out', 'Pivot Grigio',
                  'Perfect Mix', 'Donald Dodgers'],
         'Played': [8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
