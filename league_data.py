@@ -104,11 +104,30 @@ def get_all_league_data() -> pd.DataFrame:
         'Goal average': [2.40, 1.25, 1.16, 1.48, 0.96, 0.92, 0.88, 0.90, 0.57, 0.28],
         'Points': [35, 27, 26, 25, 24, 18, 18, 13, 9, 2]
     }
+    
+    # New data from the provided image (29/07/2025)
+    data6 = {
+        'Position': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        'Team': ['Tits & Bits', 'Highfield Hornets', 'Belles & Balls', 'See You Next Tuesd',
+                 'Deep In The D', 'May Contain Nuts', 'Balls Out', 'Pivot Grigio',
+                 'Perfect Mix', 'Donald Dodgers'],
+        'Played': [8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
+        'Won': [8, 5, 5, 5, 5, 4, 3, 3, 1, 0],
+        'Lost': [0, 2, 2, 3, 3, 4, 5, 5, 7, 8],
+        'Drawn': [0, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+        'Goals For': [265, 182, 216, 166, 171, 127, 157, 157, 98, 64],
+        'Goals Against': [107, 146, 154, 140, 157, 147, 175, 196, 174, 207],
+        'Goal Diff': [158, 36, 62, 26, 14, -20, -18, -39, -76, -143],
+        'Goal average': [2.48, 1.25, 1.40, 1.19, 1.09, 0.86, 0.90, 0.80, 0.56, 0.31],
+        'Points': [40, 31, 30, 29, 28, 24, 20, 18, 10, 2]
+    }
+
 
     df1 = create_dataframe(data1, '16/06/2025')
     df2 = create_dataframe(data2, '07/07/2025')
     df3 = create_dataframe(data3, '30/06/2025')
     df4 = create_dataframe(data4, '14/07/2025')
     df5 = create_dataframe(data5, '21/07/2025')
+    df6 = create_dataframe(data6, '29/07/2025')
 
-    return pd.concat([df1, df2, df3, df4, df5], ignore_index=True)
+    return pd.concat([df1, df2, df3, df4, df5, df6], ignore_index=True)
